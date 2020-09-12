@@ -1,26 +1,26 @@
-##Installation:
-1. Create your python virtual environment
+## Installation:
+**1. Create your python virtual environment**
 ```
 $ python3 -m venv pyapi
 $ source pyapi/bin/activate
 ```
 
-2. Clone this repository
+**2. Clone this repository**
 ```
 $ git clone https://github.com/bparinas/restapi-py.git
 $ cd restapi-py
 ```
 
-2. Install latest flask and sqlite3
+**2. Install latest flask and sqlite3**
 ```
 $ pip install sqlite3
 $ pip install Flask
 $ flask run --host=0.0.0.0 --port=8000
 ```
 
-Use cases:
+## Use cases:
 
-#Get all events
+**Get all events**
 ```
 request:
 
@@ -46,7 +46,7 @@ respond:
 }
 ```
 
-#Get specific event details
+**Get specific event details**
 ```
 request:
 curl -i -X GET http://34.70.25.201:8000/events/1
@@ -62,7 +62,7 @@ respond:
 }
 ```
 
-#Add/sign-up event
+**Add/sign-up event**
 ```
 request:
 curl -i -X POST http://34.70.25.201:8000/events -H "Content-Type: application/json" -d '{"event_name":"Conferences", "event_location":"Kyoto", "starttime":"09:00", "endtime":"17:00", "rsvp_email":"user3@example.com"}'
@@ -78,7 +78,7 @@ respond:
 }
 ```
 
-#Update event details
+**Update event details**
 ```
 request:
 curl -i -X PUT http://34.70.25.201:8000/events/3 -H "Content-Type: application/json" -d '{"event_name":"Conferences", "event_location":"Kyoto", "starttime":"09:00", "endtime":"17:00", "rsvp_email":"user4@example.com"}'
@@ -107,7 +107,7 @@ respond:
 }
 ```
 
-#Delete event 3
+**Delete event 3**
 ```
 request:
 curl -i -X DELETE http://34.70.25.201:8000/events/3
