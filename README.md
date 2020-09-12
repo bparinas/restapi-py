@@ -24,7 +24,7 @@ $ flask run --host=0.0.0.0 --port=8000
 ```
 request:
 
-curl -i -X GET http://34.70.25.201:8000/events
+$ curl -i -X GET http://34.70.25.201:8000/events
 
 respond:
 {
@@ -49,7 +49,7 @@ respond:
 **Get specific event details**
 ```
 request:
-curl -i -X GET http://34.70.25.201:8000/events/1
+$ curl -i -X GET http://34.70.25.201:8000/events/1
 
 respond:
 {
@@ -65,7 +65,8 @@ respond:
 **Add/sign-up event**
 ```
 request:
-curl -i -X POST http://34.70.25.201:8000/events -H "Content-Type: application/json" -d '{"event_name":"Conferences", "event_location":"Kyoto", "starttime":"09:00", "endtime":"17:00", "rsvp_email":"user3@example.com"}'
+curl -i -X POST http://34.70.25.201:8000/events -H "Content-Type: application/json" \ 
+-d '{"event_name":"Conferences", "event_location":"Kyoto", "starttime":"09:00", "endtime":"17:00", "rsvp_email":"user3@example.com"}'
 
 respond:
 {
@@ -81,7 +82,8 @@ respond:
 **Update event details**
 ```
 request:
-curl -i -X PUT http://34.70.25.201:8000/events/3 -H "Content-Type: application/json" -d '{"event_name":"Conferences", "event_location":"Kyoto", "starttime":"09:00", "endtime":"17:00", "rsvp_email":"user4@example.com"}'
+curl -i -X PUT http://34.70.25.201:8000/events/3 -H "Content-Type: application/json" \
+-d '{"event_name":"Conferences", "event_location":"Kyoto", "starttime":"09:00", "endtime":"17:00", "rsvp_email":"user4@example.com"}'
 
 respond:
 {
