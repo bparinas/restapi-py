@@ -11,10 +11,10 @@ $ git clone https://github.com/bparinas/restapi-py.git
 $ cd restapi-py
 ```
 
-**2. Install latest flask and sqlite3**
+**2. Install dependencies**
 ```
-$ pip install sqlite3
-$ pip install Flask
+$ pip install -r requirements.txt
+$ pip freeze
 $ flask run --host=0.0.0.0 --port=8000
 ```
 
