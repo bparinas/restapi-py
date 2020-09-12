@@ -66,7 +66,6 @@ def signup_event():
     }
 
     events.append(event)
-
     return jsonify(event), HTTPStatus.CREATED
 
 @app.route('/events/<int:event_id>', methods=['PUT'])
@@ -92,6 +91,8 @@ def update_event(event_id):
     return jsonify(event)
 
 @app.route('/events/<int:event_id>', methods=['DELETE'])
+
+#delete particular event 
 def delete_event(event_id):
 
     event = next((event for event in events if event['id'] == event_id), None)
@@ -100,7 +101,6 @@ def delete_event(event_id):
         return jsonify({'message': 'recipe not found'}), HTTPStatus.NOT_FOUND
 
     events.remove(event)
-
     return '', HTTPStatus.NO_CONTENT
 
 if __name__ == '__main__':
